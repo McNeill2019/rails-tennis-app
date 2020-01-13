@@ -1,0 +1,38 @@
+<% if @club.logo.present? %>
+<%= image_tag @club.logo, alt: @club.name, class: 'clublogo' %>
+<% end %>
+
+<% if @club.image.present? %>
+<%= image_tag @club.image, alt: @club.name, class: 'clublogo' %>
+<% end %>
+
+<h2>
+  <%= @club.name %>
+</h2>
+
+<div class="club">
+  <p><strong>Address:</strong> <%= @club.address %></p>
+  <p><strong>Opening Hours:</strong> <%= @club.opening %></p>
+  <p><strong>Number Of Courts:</strong> <%= @club.courts %></p>
+  <p><strong>Court Type:</strong> <%= @club.courttype %></p>
+  <p><strong>Professional:</strong> <%= @club.pro %></p>
+  <p><strong>Manager:</strong> <%= @club.manager %></p>
+  <p><strong>Coach/Coaches:</strong> <%= @club.coaches %></p>
+</div>
+
+<aside class="">
+  <p><strong>Club Info:</strong> <%= @club.amenities%></p>
+</aside>
+
+<ul>
+  <li>Members:</li>
+  <% @club_players.each do |player| %>
+  <li class ="underline">
+  <%= link_to player.name, player_path(player.id) %>
+  </li>
+
+  <% end %>
+</ul>
+
+<p><strong>Upcoming Tournaments:</strong></p>
+<p><strong>Past Tournaments:</strong></p>

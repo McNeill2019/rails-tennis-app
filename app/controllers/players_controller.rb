@@ -7,6 +7,8 @@ class PlayersController < ApplicationController
 
   def create
     Player.create player_params
+
+    redirect_to players_path
   end
 
   # Read
@@ -17,6 +19,8 @@ class PlayersController < ApplicationController
 
   def show
     @player = Player.find params[:id]
+    @player_club = @player.club.name
+    @club = @player.club
   end
 
   # Update
@@ -33,6 +37,8 @@ class PlayersController < ApplicationController
 
  #Destroy
   def destroy
+    Player.destroy params[:id]
+    redirect_to players_path
   end
 end
 

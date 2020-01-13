@@ -1,0 +1,39 @@
+<%= form_for @club do |f| %>
+
+  <%= f.label :logo, 'Upload club Logo URL' %>
+  <%= f.text_field :name %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :address %>
+  <%= f.text_field :address %>
+
+  <%= f.label :opening, 'Opening Hours' %>
+  <%= f.text_field :opening %>
+
+  <%= f.label :courts, 'Number of Courts' %>
+  <%= f.text_field :courts %>
+
+  <%= f.label :courttype, 'Court Surface' %>
+  <%= f.text_field :courttype %>
+
+  <%= f.label :pro, 'Professional' %>
+  <%= f.text_field :pro %>
+
+  <%= f.label :manager %>
+  <%= f.text_field :manager %>
+
+  <%= f.label :amenities, 'Club Info' %>
+  <%= f.text_area :amenities %>
+
+  <%= f.label :coaches, 'Coaching Staff' %>
+  <%= f.text_field :coaches %>
+
+  <%= f.label :image, 'Upload club image URL' %>
+  <%= f.text_field :image %>
+
+  <%= f.submit :submit %>
+
+   <br>
+<% end %>

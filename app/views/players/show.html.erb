@@ -2,7 +2,7 @@
 
 <%= link_to 'Edit Player', edit_player_path(@player.id) %>
 |
-<%= link_to 'Delete Player', player_path(@player.id) %>
+<%= link_to 'Delete Player', player_path(@player.id), method: 'delete' %>
 
 <br><br>
 
@@ -12,6 +12,7 @@
 
 <% end %>
 
+<p><strong>Club: </strong><%=link_to @player_club, club_path(@club.id)%></p>
 <p><strong>Date of Birth: </strong><%=@player.dob%></p>
 <p><strong>Nationality: </strong><%=@player.nationality%></p>
 <p><strong>Suburb: </strong><%=@player.suburb %></p>

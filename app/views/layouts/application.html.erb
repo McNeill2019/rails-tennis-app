@@ -11,12 +11,20 @@
   </head>
 
   <body>
+    <header>
 
     <h1>NSW Tennis App</h1>
 
     <%= link_to 'Player Index', players_path %>
     |
-    <%= link_to 'Add Player', new_player_path %>
+    <%= link_to 'Register a Player', new_player_path %>
+    |
+    <%= link_to 'NSW Clubs', clubs_path %>
+    |
+    <%= link_to 'Register a Club', new_club_path  %>
+    
+    </header>
+
 
     <%= yield %>
 

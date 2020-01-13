@@ -17,7 +17,7 @@ ul {
 
 li {
   list-style: none;
-  text-align: center;
+  /* text-align: center; */
   /* padding: 0em;
   margin: 0em; */
 }
@@ -37,4 +37,18 @@ img.player {
   max-height: 15em;
   border: 0.2em solid white;
   border-radius: 0.5em;
+}
+
+.logo {
+  max-height: 10em;
+}
+
+.clublogo {
+  max-height: 10em;
+  display: inline-block;
+  padding: 1em;
+}
+
+.underline {
+  text-decoration: underline;
 }

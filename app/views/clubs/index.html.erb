@@ -1,0 +1,9 @@
+<h2>NSW Clubs</h2>
+
+<ul>
+  <% @clubs.each do |club| %>
+  <div>
+      <li><img class ="logo" src="<%= club.logo %>" alt="Club logo"><%= link_to club.name, club_path(club.id) %></li>
+  </div>
+  <% end %>
+</ul>
