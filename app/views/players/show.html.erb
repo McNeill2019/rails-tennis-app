@@ -1,0 +1,24 @@
+<h2><%= @player.name %></h2>
+
+<%= link_to 'Edit Player', edit_player_path(@player.id) %>
+|
+<%= link_to 'Delete Player', player_path(@player.id) %>
+
+<br><br>
+
+<% if @player.image.present? %>
+
+<%= image_tag @player.image, alt: @player.name, class: 'player' %>
+
+<% end %>
+
+<p><strong>Date of Birth: </strong><%=@player.dob%></p>
+<p><strong>Nationality: </strong><%=@player.nationality%></p>
+<p><strong>Suburb: </strong><%=@player.suburb %></p>
+<p><strong>City: </strong><%=@player.city %></p>
+<p><strong>Playing Hand: </strong><%=@player.playinghand%></p>
+<p><strong>NSW Rating: </strong><%=@player.nswrating%></p>
+<p><strong>Aus Ranking: </strong><%=@player.ausranking%></p>
+<p><strong>Win %:</strong> <%=@player.win %></p>
+<p><strong>Racquet:</strong> <%=@player.racquet %></p>
+<p><strong>Coach:</strong> <%=@player.coach %></p>

@@ -1,0 +1,40 @@
+body {
+background-color: #26C9FF;
+color: white;
+font-size: 1.2em;
+font-family: 'Istok Web', sans-serif;
+}
+
+a {
+text-decoration: none;
+color: white;
+}
+
+ul {
+  padding: 0em;
+  margin: 0em;
+}
+
+li {
+  list-style: none;
+  text-align: center;
+  /* padding: 0em;
+  margin: 0em; */
+}
+
+table, {
+    border-collapse: collapse;
+
+}
+
+th,tr,td {
+  text-align: center;
+  border: 2px solid white;
+  padding: 0em;
+}
+
+img.player {
+  max-height: 15em;
+  border: 0.2em solid white;
+  border-radius: 0.5em;
+}

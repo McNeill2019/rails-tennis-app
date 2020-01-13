@@ -1,0 +1,74 @@
+<h2>NSW Tennis Players</h2>
+
+<h3> Male Players: </h3>
+
+<table>
+<tr>
+  <th>
+    Ranking
+  </th>
+  <th>
+    Name
+  </th>
+  <th>
+    Nationality
+  </th>
+</tr>
+
+<% @male.each do |player| %>
+<tr>
+  <td>
+    <ul>
+    <li><%= player.ausranking %>
+    </ul>
+  </td>
+  <td>
+    <ul>
+    <li><%= link_to player.name, player_path(player.id) %>
+    </ul>
+  </td>
+  <td>
+    <ul>
+    <li><%= player.nationality %>
+    </ul>
+  </td>
+    <% end %>
+</tr>
+</table>
+
+<hr>
+
+<h3> Female Players: </h3>
+
+<table>
+<tr>
+  <th>
+    Ranking
+  </th>
+  <th>
+    Name
+  </th>
+  <th>
+    Nationality
+  </th>
+</tr>
+<% @female.each do |player| %>
+<tr>
+  <td>
+    <ul>
+    <li><%= player.ausranking %>
+    </ul>
+  </td>
+  <td>
+    <ul>
+    <li><%= link_to player.name, player_path(player.id) %>
+    </ul>
+  </td>
+  <td>
+    <ul>
+    <li><%= player.nationality %>
+    </ul>
+  </td>
+    <% end %>
+</tr>
+</table>

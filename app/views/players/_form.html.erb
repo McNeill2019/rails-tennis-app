@@ -1,0 +1,44 @@
+<%= form_for @player do |f| %>
+
+<%= f.label :name, 'Name:' %>
+<%= f.text_field :name %>
+
+<%= f.label :dob, 'Date of Birth:' %>
+<%= f.text_field :dob%>
+
+<%= f.label :gender, 'Gender:' %>
+<%= f.text_field :gender %>
+
+<%= f.label :nationality, 'Nationality:' %>
+<%= f.text_field :nationality %>
+
+<%= f.label :suburb, 'Suburb:' %>
+<%= f.text_field :suburb %>
+
+<%= f.label :city, 'City:' %>
+<%= f.text_field :city %>
+
+<%= f.label :playinghand, 'Playing Hand:' %>
+<%= f.text_field :playinghand %>
+
+<%= f.label :nswrating, 'NSW Rating:' %>
+<%= f.text_field :nswrating %>
+
+<%= f.label :ausranking, 'Australian Ranking:' %>
+<%= f.text_field :ausranking %>
+
+<%= f.label :win, 'Win %:' %>
+<%= f.text_field :win %>
+
+<%= f.label :racquet, 'Racquet:' %>
+<%= f.text_field :racquet %>
+
+<%= f.label :coach, 'Coach:' %>
+<%= f.text_field :coach%>
+
+<%= f.label :image, 'Image URL:' %>
+<%= f.text_field :image %>
+
+<%= f.submit :submit %>
+
+<% end %>

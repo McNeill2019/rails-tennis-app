@@ -7,9 +7,24 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <link href="https://fonts.googleapis.com/css?family=Istok+Web|Open+Sans&display=swap" rel="stylesheet">
   </head>
 
   <body>
+
+    <h1>NSW Tennis App</h1>
+
+    <%= link_to 'Player Index', players_path %>
+    |
+    <%= link_to 'Add Player', new_player_path %>
+
     <%= yield %>
+
+    <footer>
+
+    &copy Tennis NSW, 2020
+
+    </footer>
+
   </body>
 </html>
