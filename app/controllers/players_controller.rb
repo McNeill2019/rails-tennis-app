@@ -15,12 +15,16 @@ class PlayersController < ApplicationController
   def index
     @male = Player.where gender: 'Male'
     @female = Player.where gender: 'Female'
+    @female_sort = @female.sort_by { |p| p[:ausranking] }
+    @male_sort = @male.sort_by { |p| p[:ausranking] }
   end
 
   def show
     @player = Player.find params[:id]
     @player_club = @player.club.name
     @club = @player.club
+    @upcoming_tournaments = @player.tournaments.where state: 'true'
+    @past_tournaments = @player.tournaments.where state: 'false'
   end
 
   # Update

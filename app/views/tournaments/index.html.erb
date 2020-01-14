@@ -1,0 +1,19 @@
+<h2>Upcoming Tournaments</h2>
+
+<ul>
+  <% @upcomingtournaments.each do |tournament| %>
+  <li>
+    <strong>Name: </strong><%= link_to tournament.name, tournament_path(tournament.id) %> <strong>Date:</strong> <%= tournament.date %>
+  </li>
+  <% end %>
+</ul>
+
+<h2> Past Tournaments</h2>
+
+<ul>
+  <% @pasttournaments.each do |tournament| %>
+  <li>
+<strong>Name: </strong><%= link_to tournament.name, tournament_path(tournament.id) %><strong>Date: <%= tournament.date %></strong>
+  </li>
+  <% end %>
+</ul>

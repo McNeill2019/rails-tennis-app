@@ -120,3 +120,68 @@ c2.players << p3 << p4 << p13 << p14
 c3.players << p5 << p6 << p15 << p16
 c4.players << p7 << p8 << p17 << p18
 c5.players << p9 << p10 << p19 << p20
+
+
+
+Tournament.destroy_all
+
+puts "creating tournaments......."
+
+
+t1 = Tournament.create! imageclub: 'https://tapplecourt.com/storage/30b8fbca-0b38-11e8-93c5-9e2a6710c753/the-neutral-bay-club-fSJ', name: 'Neutral Bay AMT Singles Classic', date: '01/12/2019', state: false , time: 'N/A', menswinner: p1.id , mensrunnerup: p3.id , menssemifinalist: p2.id , mensquarterfinalist: p4.id , femalewinner: p11.id , femalerunnerup: p13.id , femalesemifinalist: p16.id , femalequarterfinalist: p18.id , winnermaleimage: 'https://i.imgur.com/L2Hb6JE.jpg', winnerfemaleimage: 'https://nnimgt-a.akamaihd.net/transform/v1/crop/frm/UNVp3XHzU7CdKRdezEw4T5/9eefb20c-6f09-4551-ab86-1f45177d6629.JPG/r0_0_4109_2739_w1200_h678_fmax.jpg'
+
+t2 = Tournament.create! imageclub: 'https://wheeleasy.org/static/images/places/597ada5a422dee24ac4a5ea2/5b8b901d2e60985e34baf0df-986acb30-ae81-11e8-bb47-37b93b50ecc6IMG_1880.jpg', name: 'Manly AMT Singles Classic', date: '25/11/2019', state: false, time: 'N/A', menswinner: p8.id , mensrunnerup: p9.id , menssemifinalist: p10.id , mensquarterfinalist: p7.id , femalewinner: p12.id , femalerunnerup: p14.id , femalesemifinalist: p16.id, femalequarterfinalist: p17.id , winnermaleimage: 'http://www.brenanparktenniscentre.com.au/images/944813-2012-01-23-tennis-2[1].jpg?665', winnerfemaleimage: 'https://i.nextmedia.com.au/Galleries/20180909050206_GettyImages-1029567578.jpg'
+
+
+t3 = Tournament.create! imageclub: 'https://thingdoer.com/things-to-do-photos/2/1/3/9/21390_l.jpg', name: 'Marrickville AMT Singles Classic', date: '28/11/2019', state: false, time: 'N/A', menswinner: p1.id , mensrunnerup: p4.id , menssemifinalist: p5.id , mensquarterfinalist: p8.id , femalewinner: p14.id , femalerunnerup: p16.id , femalesemifinalist: p17.id, femalequarterfinalist: p19.id , winnermaleimage: 'https://i.imgur.com/L2Hb6JE.jpg', winnerfemaleimage: 'http://www.mcdonald.nsw.edu.au/newsletter/wp-content/uploads/sites/3/2018/09/Elana-Nasr.jpg'
+
+
+t4 = Tournament.create! imageclub: 'https://www.tennis.com.au/easternsuburbstennis/files/2019/02/coogee-courts-408x306.jpg', name: 'Coogee AMT Singles Classic', date: '05/12/2019', state: false ,time: 'N/A', menswinner: p3.id , mensrunnerup: p4.id , menssemifinalist: p6.id , mensquarterfinalist: p8.id , femalewinner: p14.id , femalerunnerup: p15.id , femalesemifinalist: p16.id, femalequarterfinalist: p19.id , winnermaleimage: 'http://abacus.bates.edu/sports/mten/08/Photos3/images/IMG_87.jpg', winnerfemaleimage: 'http://www.mcdonald.nsw.edu.au/newsletter/wp-content/uploads/sites/3/2018/09/Elana-Nasr.jpg'
+
+
+t5 = Tournament.create! imageclub: 'https://www.top4.com.au/custom/domain_1/image_files/191_photo_272545.jpg', name: 'Royal Sydney AMT Singles Classic', state: false, date: '06/10/2019', time: 'N/A', menswinner: p5.id , mensrunnerup: p6.id , menssemifinalist: p9.id , mensquarterfinalist: p5.id , femalewinner: p15.id , femalerunnerup: p12.id , femalesemifinalist: p14.id, femalequarterfinalist: p20.id , winnermaleimage: 'https://www.tennis.com.au/nsw/files/2015/05/Adult1024x768-700x450.jpg', winnerfemaleimage: 'http://www.hunteracademy.org.au/client_images/2122880.jpg'
+
+t6 = Tournament.create! imageclub: 'https://tapplecourt.com/storage/30b8fbca-0b38-11e8-93c5-9e2a6710c753/the-neutral-bay-club-fSJ', name: 'Neutral Bay Futures', state: true,  date: '01/02/2020', time: 'First Match 10am'
+
+t7 = Tournament.create! imageclub: 'https://wheeleasy.org/static/images/places/597ada5a422dee24ac4a5ea2/5b8b901d2e60985e34baf0df-986acb30-ae81-11e8-bb47-37b93b50ecc6IMG_1880.jpg', name: 'Manly Futures Singles', state: true, date: '05/02/2020', time: 'First Match 10am'
+
+t8 = Tournament.create! imageclub: 'https://thingdoer.com/things-to-do-photos/2/1/3/9/21390_l.jpg', name: ' Marrickville Futures Classic',  date: '10/02/2020', state: true, time: 'First Match 10am'
+
+t9 = Tournament.create! imageclub: 'https://www.tennis.com.au/easternsuburbstennis/files/2019/02/coogee-courts-408x306.jpg', name: 'Coogee Futures Singles', date: '12/02/2020', state: true, time: 'First Match 10am'
+
+t10 = Tournament.create! imageclub: 'https://www.top4.com.au/custom/domain_1/image_files/191_photo_272545.jpg', name: 'Royal Sydney Futures Singles', date: '15/02/2020', state: true, time: 'First Match 10am'
+
+puts 'Created #{Tournament.count} tournaments'
+
+p1.tournaments << t1 << t3 << t5 << t7 << t8 << t10
+p2.tournaments << t1 << t2 << t3 << t6 << t9
+p3.tournaments << t1 << t3 << t4 << t6 << t7 << t8 << t9
+p4.tournaments << t1 << t3 << t8 << t9 << t10
+p5.tournaments << t3 << t4 << t6 << t8 << t10
+p6.tournaments << t4 << t5 << t7 << t8 << t9
+p7.tournaments << t2 << t4 << t8 << t9 << t10
+p8.tournaments << t2 << t4 << t5 << t7 << t8 << t10
+p9.tournaments << t2 << t3 << t4 << t8 << t9
+p10.tournaments << t2 << t4 << t5 << t6 << t8 << t9
+p11.tournaments << t1 << t2 << t7 << t8 << t9
+p12.tournaments << t2 << t4 << t5 << t7 << t8 << t10
+p13.tournaments << t1 << t4 << t7 << t8 << t9
+p14.tournaments << t2 << t3 << t4 << t7 << t8 << t10
+p15.tournaments << t1 << t4 << t5 << t8 << t9 << t10
+p16.tournaments << t1 << t2 << t3 << t4 << t7 << t8
+p17.tournaments << t2 << t3 << t4 << t5 << t8 << t9
+p18.tournaments << t1 << t3 << t5 << t8 << t9
+p19.tournaments << t3 << t4 << t7 << t9
+p20.tournaments << t1 << t2 << t3 << t6 << t8 << t10
+
+c1.tournaments << t1 << t6
+c2.tournaments << t2 << t7
+c3.tournaments << t3 << t8
+c4.tournaments << t4 << t9
+c5.tournaments << t5 << t10 
+
+puts "Tournament #{t1.name} has these entrants: #{ t1.players.pluck(:name).join(', ')}"
+puts "Tournament #{t2.name} has these entrants: #{ t2.players.pluck(:name).join(', ')}"
+
+puts "player #{ p1.name} has player and entered these tournaments: #{ p1.tournaments.pluck(:name).join(',')}"
+puts "player #{ p2.name} has played and entered these tournaments: #{ p2.tournaments.pluck(:name).join(',')}"

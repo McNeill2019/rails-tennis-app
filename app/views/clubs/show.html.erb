@@ -1,3 +1,5 @@
+
+
 <% if @club.logo.present? %>
 <%= image_tag @club.logo, alt: @club.name, class: 'clublogo' %>
 <% end %>
@@ -9,6 +11,10 @@
 <h2>
   <%= @club.name %>
 </h2>
+
+<%= link_to 'Delete club', club_path(@club.id), method: 'delete' %>
+|
+<%= link_to 'Edit Club', edit_club_path(@club.id) %>
 
 <div class="club">
   <p><strong>Address:</strong> <%= @club.address %></p>
@@ -34,5 +40,25 @@
   <% end %>
 </ul>
 
-<p><strong>Upcoming Tournaments:</strong></p>
-<p><strong>Past Tournaments:</strong></p>
+<ul>
+  <li>Upcoming Tournaments at The Club:</li>
+  <br>
+  <% @upcoming_comps.each do |tournament| %>
+  <li class ="underline">
+  <%= link_to tournament.name, tournament_path(tournament.id) %> <%= tournament.date %>
+  </li>
+
+  <% end %>
+</ul>
+
+<hr>
+
+<ul>
+  <li>Past Tournaments at The Club:</li>
+  <br>
+  <% @past_comps.each do |tournament| %>
+  <li class ="underline">
+  <%= link_to tournament.name, tournament_path(tournament.id) %> <%= tournament.date %>
+  </li>
+
+  <% end %>

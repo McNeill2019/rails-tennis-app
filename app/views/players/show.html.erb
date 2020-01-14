@@ -23,3 +23,27 @@
 <p><strong>Win %:</strong> <%=@player.win %></p>
 <p><strong>Racquet:</strong> <%=@player.racquet %></p>
 <p><strong>Coach:</strong> <%=@player.coach %></p>
+
+<ul>
+  <li>Upcoming Tournaments:</li>
+  <br>
+  <% @upcoming_tournaments.each do |tournament| %>
+  <li class ="underline">
+  <%= link_to tournament.name, tournament_path(tournament.id) %> <%= tournament.date %>
+  </li>
+
+  <% end %>
+</ul>
+
+<hr>
+
+<ul>
+  <li>Past Tournaments:</li>
+  <br>
+  <% @past_tournaments.each do |tournament| %>
+  <li class ="underline">
+  <%= link_to tournament.name, tournament_path(tournament.id) %> <%= tournament.date %>
+  </li>
+
+  <% end %>
+</ul>

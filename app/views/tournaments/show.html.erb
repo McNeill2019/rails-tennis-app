@@ -1,0 +1,34 @@
+<h2>
+  <%= @tournament.name %>
+</h2>
+
+<% if @tournament.imageclub.present? %>
+
+<%= image_tag @tournament.imageclub, alt: @tournament.name, class: 'player' %>
+<% end %>
+
+
+<p><strong>Date:</strong> <%= @tournament.date %></p>
+<p><strong>Time:</strong> <%= @tournament.time %></p>
+
+<h2><strong>Mens Winner: </strong><%= @mens_winner.name%> (<%= @mens_winner.club.name %> Tennis Club)</h2>
+
+<%= image_tag @tournament.winnermaleimage , alt: @mens_winner.name, class: 'player' %>
+
+<p><strong>Mens Runner Up: </strong> <%= @mens_runner.name %> (<%= @mens_runner.club.name %> Tennis Club)</p>
+
+<p><strong>Mens Semi Finalist: </strong> <%= @mens_semi.name  %> (<%= @mens_semi.club.name %> Tennis Club) </p>
+
+<p><strong>Mens Quarter Finalist: </strong> <%= @mens_quarters.name %> (<%= @mens_quarters.club.name %> Tennis Club)</p>
+
+
+
+<h2><strong>Female Winner: </strong><%=   @female_winner.name %> (<%= @female_winner.club.name %> Tennis Club)</h2>
+
+<%= image_tag @tournament.winnerfemaleimage, alt: @female_winner.name, class: 'player' %>
+
+<p><strong>Female Runner Up: </strong> <%= @female_runner.name  %> (<%= @female_runner.club.name %> Tennis Club)</p>
+
+<p><strong>Female Semi Finalist: </strong> <%= @female_semi.name %> (<%= @female_semi.club.name %> Tennis Club)</p>
+
+<p><strong>Female Quarter Finalist: </strong> <%= @female_quarters.name %> (<%= @female_quarters.club.name %> Tennis Club)</p>

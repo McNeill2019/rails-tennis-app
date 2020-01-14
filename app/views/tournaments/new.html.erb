@@ -1,0 +1,23 @@
+<h1>Register a Tournament</h1>
+
+<h2>Please fill out these sections :</h2>
+
+<%= form_for @tournament do |f| %>
+
+  <%= f.label :imageclub, '1. Enter Logo URL of the Tournament:' %>
+  <%= f.text_field :imageclub %>
+
+  <%= f.label :name, '2. Enter the Tournament Name:' %>
+  <%= f.text_field :name %>
+
+  <%= f.label :date, '3. Enter the Tournament Date:' %>
+  <%= f.text_field :date %>
+
+  <%= f.label :time, '4. Enter the time of the tournament' %>
+  <%= f.text_field :time %>
+
+  <%= f.submit :submit %>
+
+   <br>
+<% end %>
+<!-- </form> -->

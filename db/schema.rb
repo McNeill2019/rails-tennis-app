@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_13_061911) do
+ActiveRecord::Schema.define(version: 2020_01_14_084449) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,6 +45,32 @@ ActiveRecord::Schema.define(version: 2020_01_13_061911) do
     t.string "racquet"
     t.string "coach"
     t.string "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "club_id"
+  end
+
+  create_table "players_tournaments", force: :cascade do |t|
+    t.integer "tournament_id"
+    t.integer "player_id"
+  end
+
+  create_table "tournaments", force: :cascade do |t|
+    t.text "imageclub"
+    t.text "name"
+    t.date "date"
+    t.boolean "state"
+    t.text "time"
+    t.integer "menswinner"
+    t.integer "mensrunnerup"
+    t.integer "menssemifinalist"
+    t.integer "mensquarterfinalist"
+    t.integer "femalewinner"
+    t.integer "femalerunnerup"
+    t.integer "femalesemifinalist"
+    t.integer "femalequarterfinalist"
+    t.text "winnermaleimage"
+    t.text "winnerfemaleimage"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "club_id"
